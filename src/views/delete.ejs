@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete A Users</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/create">Delete Users</a>
+    </div>
+    <div class="mt-4 form-add-new">
+        <h3>Delete a user</h3>
+        <form method="POST" action="/delete-user">
+            <div class="form-group d-none">
+                <input type="text" class="form-control" id="userId" name="userId" value="<%= userEdit.id %>">
+            </div>
+            <div class="form-group">
+                <label for="email">Are you sure to delete this user with email</label>
+                <input type="text" class="form-control" id="email" name="email" value="<%= userEdit.email %>">
+            </div>
+            <a class="btn btn-primary" href="/">BACK</a>
+            <button type="submit" class="btn btn-danger">DELETE</button>
+        </form>
+    </div>
+</body>
+
+</html>
